@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Normal Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+</head>
+<body>
+    
+    <!--<div id="parentDiv">-->
+        <h3 id="userFormHeader">User Form Submission</h3>
+        <h3 id="detailsFormHeader">User Details</h3>
+   <!--     <button id="newButton">New</button>-->
+        <br>
+        <div id="fullFormDiv">    
+            <form method="post" id="form" autocomplete="off" enctype="multipart/form-data">    
+            <label class="labelClass" for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" class="user" onfocusout="firstNameValidation()"  placeholder="Enter your first name">
+            <br>
+            <span  id="spanFirstName" style="visibility: hidden;color: red;margin-left: 105px;" >This is not a valid name</span>
+            <br>
+            <label class="labelClass" for="lastName">Last Name:</label>
+            <input type="text" id="lastName" style="margin-top: 9px;" name="lastName" class="user"m onfocusout="lastNameValidation()" placeholder="Enter your last name">
+            <br>
+            <span id="spanLastName" style="visibility: hidden;color: red;margin-left: 105px;";>This is not a valid name</span>
+            <br>
+            <label class="labelClass" for="userName">User Name:</label>
+            <input type="text" style="margin-top: 9px;" id="userName" name="userName" class="user" onfocusout="userNamevalidation()"  placeholder="Enter your User Name">
+            <br>
+            <span id="spanUserName" style="visibility: hidden;color: red;margin-left: 105px;">This is not a valid user name</span>
+            <br>
+            <label class="labelClass" for="userEmail" style="margin-right:54px;">Email:</label>
+            <input type="email" id="userEmail" style="margin-top: 9px;" name="userEmail" class="user" onfocusout="emailvalidation()" placeholder="Enter your Email Address">
+            <br>
+            <span id="spanEmailAddress" style="visibility: hidden;color: red;margin-left: 105px;">This is not a valid email id</span>
+            <br>
+            <label class="labelClass" for="userAge" style="margin-right:65px;">Age:</label>
+            <input type="number" style="margin-top: 9px;" id="userAge" name="userAge" class="user" onfocusout="ageValidation()" placeholder="Enter Age">
+            <br>
+            <span id="spanAge" style="visibility: hidden;color: red;margin-left: 105px;">This is not a valid age</span>
+            <br>
+            <label class="labelClass" for="userPhoneNumber" style="margin-right:40px;">Number:</label>
+            <input type="number" style="margin-top: 9px;" id="userPhoneNumber" name="userPhoneNumber" class="user" onfocusout="phoneNumberValidation()" placeholder="Enter phone Number.">
+            <br>
+            <span id="spanPhoneNumber" style="visibility: hidden;color: red;margin-left: 105px;">This is not a valid phone number</span>
+            <br>
+            <label class="labelClass" for="userAddress" style="margin-right:40px;vertical-align: text-bottom;">Address:</label>
+            <input placeholder="Enter your Address here" class="user" id="userAddress" name="userAddress" style="margin-top: 9px;" onfocusout="addressValidation()"></input>
+            <br>
+            <span id="spanAddress" style="visibility: hidden;color:red;margin-left: 105px;">fill up the address</span>
+            <br>
+            <label class="labelClass" for="userPassword" style="margin-right:33px;">Password:</label>
+            <input type="password" style="margin-top: 7px;margin-bottom: 10px;" id="userPassword" name="userPassword" class="user" onfocusout="passwordValidation()" placeholder="Enter password.">
+            <span id="spanPassword" style="color: red; display: none; margin-top: 7px; margin-left: 105px;">
+            Password must be 8 characters long, less than 12, one capital alphabet, one small alphabet, and one special character
+            </span>
+            <br>
+            <label for="imageUpdate" style="margin-bottom: 10px;margin-top: 30px; vertical-align: top;;">Select Image</label>
+            
+            <img src="php/files/profile.jpg"  style="margin-left: 22px;margin-top: 20px;" alt="an image" id="imgsrc" >
+            
+            <input type="file" accept="image/jpeg,image/jpg" name="imageInput" id="imageUpdate"oninput="newImageUpdate()">
+            <br>
+            <span id="spanImage" style="visibility: hidden;color: red;margin-left: 105px;">Image must be less than 100kb</span>
+            <br>
+            <button  disabled value="Submit" type="submit" id="submitButton" style="margin-top: 5px;margin-left: 110px;" >Submit</button>
+            <button    id="clear" style="margin-left: 20px;margin-top: 5px;"onclick="clearInputFields()" >Clear All</button>
+    
+            </form>
+    </div>
+    <div id="finalForm">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th id>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Image</th>
+                    <th >Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Your table rows (data) go here -->
+            </tbody>
+        </table>
+    </div>
+    
+   
+    
+      
+
+    <script  src="app/myscripts.js"> </script>
+</body>
+</html>

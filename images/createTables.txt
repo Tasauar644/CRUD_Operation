@@ -1,0 +1,23 @@
+CREATE TABLE users(
+    Personid int NOT NULL AUTO_INCREMENT,
+    FirstName varchar(255),
+    LastName varchar(255),
+    UserName varchar(255),
+    Email varchar(255),
+    Age int,
+    PhoneNumber varchar(255),
+    Address varchar(255),
+    UserPassword varchar(255),
+    PRIMARY KEY (Personid)
+);
+
+CREATE TABLE imagesource(
+	 Personid int NOT NULL AUTO_INCREMENT,
+	 ImageName varchar(255),
+ 	 ImageType varchar(255),
+	 ImageTempName varchar(255),
+	 ImageSize varchar(255),
+	 ImageSource varchar(255),
+	 FOREIGN KEY (Personid ) REFERENCES users(Personid )
+
+);
